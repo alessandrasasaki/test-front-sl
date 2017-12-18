@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Teste FrontEnd Sexlog</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />-->
+
+    <!-- Bootstrap -->
+    <link href="./src/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="./style/myStyle.css">
+
+    <!-- Card JS -->
+    <link rel="stylesheet" href="./src/lib/cardJs/card-js.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./src/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <!-- modal content 1 -->
+    <div class="modal-dialog" role="document">
+        <div id="content" class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title title"><strong>Assine o Sexlog VIP</strong></p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Modal Body 1-->
+            <div id="modalContent1" class="modal-body" >
+                <div class="content">
+                    <!--Show price area-->
+                    <div id="left">
+                        <div id="preco"></div>
+                    </div>
+                    <!--END Show price area-->
+
+                    <!-- Price Cards -->
+                    <div id="right">
+                        <div class="card card1">
+                            <div class="radio">
+                                <input type="radio" name="preco" value="1" checked>
+                                <label id="radiobutton1"></label>
+                            </div>
+                        </div>
+                        <div class="card card2">
+                            <div class="radio">
+                                <input type="radio" name="preco" value="2">
+                                <label id="radiobutton2"></label>
+                            </div>
+                        </div>
+                        <div class="card card3">
+                            <div class="radio">
+                                <input type="radio" name="preco" value="3">
+                                <label id="radiobutton3"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Price Cards -->
+                </div>
+            </div>
+            <!-- END Modal Body 1-->
+
+            <!-- Modal Body 2-->
+            <div id="modalContent2"class="modal-body">
+                <div class="content">
+                    <p>Plano escolhido: <b>Trimestral - R$119,70 </b></p>
+                        <hr style="border-top: dotted 2px; color: #666666" />
+                        <br/>
+                    <!--card inputs-->
+                    <div class="card-js form-group">
+
+                        <!-- Card number -->
+                        <input class="card-number form-control"
+                               name="my-custom-form-field__card-number"
+                               placeholder="Número do cartão"
+                               autocomplete="off"
+                               required>
+
+                        <!-- Name on card -->
+                        <input class="name form-control"
+                               id="the-card-name-id"
+                               name="my-custom-form-field__card-name"
+                               placeholder="Nome do titular"
+                               autocomplete="off"
+                               required>
+
+
+                        <!-- Card expiry (element that is displayed) -->
+                        <input class="expiry form-control"
+                               autocomplete="off"
+                               required>
+
+                        <!-- Card expiry - Month (hidden) -->
+                        <input class="expiry-month" name="my-custom-form-field__card-expiry-month" required>
+
+                        <!-- Card expiry - Year (hidden) -->
+                        <input class="expiry-year" name="my-custom-form-field__card-expiry-year" required>
+
+
+                        <!-- Card CVC -->
+                        <input class="cvc form-control"
+                               name="my-custom-form-field__card-cvc"
+                               autocomplete="off"
+                               required>
+
+                    </div><!-- END .card-js wrapper -->
+                    <!-- END card inputs -->
+
+                    <!-- warning -->
+                    <div class="alert alert-warning">
+                        Para a sua privacidade, a cobrança será feita em nome de "assinet-pgto-sl".
+                    </div>
+                    <!--END warning -->
+                </div>
+            </div>
+            <!-- END Modal Body 2-->
+
+
+            <!-- Modal Body 3-->
+            <div id="modalContent3" class="modal-body">
+                <div class="content">
+                    <!--final message-->
+                    <i class="fa fa-check-circle"  style="font-size:100px; color: #49CBA4;"> </i>
+                    <p class="endmessage"><b>Parabéns!</b><br/> Você agora é um assinante Sexlog! </p>
+                    <button id="endButton" type="button" class="btn btn-primary">Explorar o Sexlog</button>
+                    <!-- END final message -->
+                </div>
+            </div>
+            <!-- END Modal Body 3-->
+
+            <!-- modal footer -->
+            <div id="modalfooter" class="modal-footer">
+                <img class="securityImg" src="./src/img/icon-secure.png">
+                <button id="nextButton" type="button" class="btn btn-primary">Próximo passo: pagamento</button>
+            </div>
+            <!--END Modal footer -->
+        </div>
+    </div>
+    <!-- END modal content 1 -->
+
+
+</div>
+<!-- END modal -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="./src/lib/jQuery/jquery-2.2.4.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="./src/lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Angular -->
+    <script type="text/javascript" src="./src/lib/angular/angular.min.js"></script>
+
+    <!-- Angular Route-->
+    <script type="text/javascript" src="./src/lib/angular-route/angular-route.min.js"></script>
+
+    <!-- Card Js -->
+    <script type="text/javascript" src="./src/lib/cardJs/card-js.min.js"></script>
+
+    <!--Processing json data -->
+    <script type="text/javascript" src="./server/ProcessData.js"></script>
+
+     <!--JSON -->
+     <script type="text/JSON" src="./server/data.json"></script>
+
+    <!--modal script-->
+    <script type="text/javascript" src="./src/Utils/Modal.js"></script>
+
+    <!-- validation -->
+    <script type="text/javascript" src="./src/lib/PawelDecowski-jquery-creditcardvalidator-ec16ea1/jquery.creditCardValidator.js"></script>
+    
+     <!-- sweetalert -->
+     <script type="text/javascript" src="./src/lib/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+.title{
+    color: #661577;
+    padding-left: 40%;
+}
+
+#content{
+    width: 150%;
+    right: 25%;
+    height: 120%;
+    bottom: 50%;
+}
+
+.content {
+    overflow:auto;
+    width: 100%;
+    height: 100%;
+    /*background: gray;*/
+}
+
+#preco{
+    padding: 0 28px;
+    color: #666666;
+}
+
+#left, #right {
+    width: 50%;
+    /*margin:2px;*/
+    padding: 1em;
+    background: white;
+    height: 98%;
+}
+
+#left  { float:left;  }
+#right { float:right; }
+
+.planName{
+    display:inline-block;
+    text-align: left;
+}
+
+.planDiscount1, .planDiscount2, .planDiscount3{
+    display:inline-block;
+    float: right;
+}
+
+#radiobutton1, #radiobutton2, #radiobutton3, .imgContent, .imgP{
+    display: inline;
+}
+
+.imgP{
+    font-size: 12px;
+    text-align: center;
+}
+
+.securityImg{
+    padding-right: 55%;
+}
+
+.card{
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.card:hover{
+    border-color: #661577;
+
+}
+
+.radio{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.radio > label > div > b {
+    color: #49CBA4;
+}
+
+.priceCurrency{
+    font-size:20px;
+    margin-bottom: 30px; 
+}
+
+.priceNumber{
+    color: #661577;
+    font-size: 80px;
+    margin-bottom: 0;
+}
+
+.priceDecimal{
+    color: #661577;
+    font-size: 25px;
+}
+
+.pricePeriodicy{
+    font-size: 20px;
+    color: #D51D73;
+}
+
+.priceTotal{
+    font-size: 12px;
+}
+
+.priceTotal>b{
+    color: #661577;
+}
+
+.block1,.block2, .block3{
+    display: inline-block;
+}
+
+#preco > hr, .descriptionblock{
+    margin: 0 20px;
+}
+
+.allblocks{
+    padding: auto;
+    text-align: center;
+}
+
+#nextButton, #nextButton:hover, #nextButton:active, #nextButton:visited, #nextButton:focus{
+    background-color: #49CBA4;
+    border-color: #32B48D;
+    outline:none !important;
+    box-shadow: none;
+}
+
+#endButton, #endButton:hover, #endButton:active, #endButton:visited, #endButton:focus{
+    background-color: #661577;
+    border-color: #661577;
+    color: #FFF;
+    outline:none !important;
+    box-shadow: none; 
+    height: 50px;
+    width: 250px;
+}
+
+#modalContent2 > .content{
+    text-align: left;
+    padding: 0 50px;
+}
+
+#modalContent3 > .content{
+    text-align: center;
+    padding: 50px 0;
+}
+
+.endmessage{
+    font-size: 30px;
+    color: #666666;
+}
+
+@media screen and (max-width:850px) {
+    #content{
+        max-width: 500px;
+        right: 0%;
+    }
+
+    #left  { float:none;  }
+    #right { float:none; }
+
+    #left, #right {
+        width: 100%;
+        /*margin:2px;*/
+        padding: 1em;
+        background: white;
+        height: 98%;
+    }
+    #nextButton{
+        width: 100%;
+    }
+
+    .descriptionblock{
+        text-align: left;
+        padding-left: 15%;
+    }
+
+    .title{
+        color: #661577;
+        padding-left: 30%;
+    }
+    .securityImg{
+        display: none;
+    }
+  }
+
+  
+  @media screen and (max-width:610px) {
+    #content{
+        max-width: 400px;
+        left: 10%;
+    }
+
+    .descriptionblock{
+        text-align: left;
+        padding-left: 5%;
+    }
+
+    .securityImg{
+        display: none;
+    }
+
+    .title{
+        color: #661577;
+        padding-left: 25%;
+    }
+  }
+
+  @media screen and (max-width:400px) {
+    #content{
+        max-width: 350px;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    #preco{
+        padding: 0;
+    }
+
+    #modalcontent1, #modalcontent2, #modalcontent3{
+        padding: 0;
+    }
+
+    .descriptionblock{
+        text-align: left;
+        padding-left: 0 ;
+    }
+
+    .securityImg{
+        display: none;
+    }
+
+    .title{
+        color: #661577;
+        padding-left: 18%;
+    }
+  }
